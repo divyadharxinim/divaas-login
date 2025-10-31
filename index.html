@@ -9,62 +9,63 @@
       margin: 0;
       padding: 0;
       font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #ffc1e3, #f7a8c8);
+      background: linear-gradient(135deg, #ffb6c1, #ffcce7);
       height: 100vh;
       display: flex;
-      align-items: center;
       justify-content: center;
+      align-items: center;
     }
 
-    .login-container {
+    .login-box {
       background-color: #fff;
+      border-radius: 16px;
+      padding: 40px 30px;
       width: 350px;
-      border-radius: 20px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-      padding: 40px;
       text-align: center;
+      box-shadow: 0 0 25px rgba(0, 0, 0, 0.15);
     }
 
-    .login-container img {
-      width: 90px;
-      height: 90px;
-      object-fit: contain;
+    .logo {
+      width: 100px;
+      height: 100px;
       margin-bottom: 20px;
+      object-fit: contain;
     }
 
     h2 {
-      color: #d6336c;
       margin-bottom: 20px;
+      color: #d6336c;
+      font-size: 24px;
+      letter-spacing: 1px;
     }
 
     input[type="text"],
     input[type="password"] {
       width: 100%;
       padding: 10px;
-      margin: 10px 0;
+      margin: 8px 0;
       border: 1px solid #f1b6d1;
       border-radius: 8px;
       outline: none;
       font-size: 14px;
     }
 
-    input[type="text"]:focus,
-    input[type="password"]:focus {
+    input:focus {
       border-color: #d6336c;
       box-shadow: 0 0 5px rgba(214, 51, 108, 0.3);
     }
 
     button {
+      width: 100%;
       background-color: #d6336c;
       color: white;
       border: none;
-      padding: 10px 20px;
+      padding: 10px;
+      font-size: 15px;
       border-radius: 8px;
       cursor: pointer;
-      width: 100%;
-      font-size: 15px;
-      margin-top: 15px;
-      transition: background-color 0.3s;
+      margin-top: 12px;
+      transition: background-color 0.3s ease;
     }
 
     button:hover {
@@ -74,7 +75,7 @@
     .footer {
       margin-top: 15px;
       font-size: 13px;
-      color: #555;
+      color: #666;
     }
 
     .footer a {
@@ -85,8 +86,8 @@
   </style>
 </head>
 <body>
-  <div class="login-container">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Lipstick_icon_red.png" alt="Lipstick Logo" />
+  <div class="login-box">
+    <img class="logo" src="https://upload.wikimedia.org/wikipedia/commons/0/0a/Lipstick_icon_red.png" alt="Lipstick Logo" />
     <h2>Dvaas Cosmetics Login</h2>
     <form>
       <input type="text" placeholder="Username" required />
@@ -99,3 +100,4 @@
   </div>
 </body>
 </html>
+
