@@ -1,10 +1,9 @@
 <!--
 Dvaas Cosmetics - Single-file Login Page
 Instructions:
-1. Replace `logo.png` with your target logo file (same folder). If you don't have a logo, upload one to the repo and name it `logo.png` or change the <img> src.
-2. This is a static front-end page (no backend). The login form uses simple client-side validation only.
-3. To host on GitHub Pages: create a repo, add this file (index.html) to the repo root (or `public/index.html`) and enable GitHub Pages from Settings -> Pages -> Source: main branch / root. The page will be live at https://<your-username>.github.io/<repo-name>/
-4. For the assignment screenshot: open the file in GitHub (showing source) and the live URL in the browser, then take a parallel screenshot.
+1. The logo now uses an online placeholder image (no need for logo.png upload).
+2. To host on GitHub Pages: create a repo, add this file (index.html) to the repo root (or `public/index.html`) and enable GitHub Pages from Settings -> Pages -> Source: main branch / root. The page will be live at https://<your-username>.github.io/<repo-name>/
+3. For the assignment screenshot: open the file in GitHub (showing source) and the live URL in the browser, then take a parallel screenshot.
 -->
 
 <!doctype html>
@@ -25,7 +24,6 @@ Instructions:
     .brand h1{margin:0;font-size:20px}
     .desc{margin-top:12px;color:var(--muted);max-width:320px;text-align:center}
 
-    /* Login form */
     form{display:flex;flex-direction:column;gap:12px}
     label{font-size:13px;color:var(--muted)}
     input[type="text"], input[type="password"]{padding:12px 14px;border-radius:8px;border:1px solid #e6e7ee;font-size:15px}
@@ -35,7 +33,6 @@ Instructions:
     .btn.secondary{background:transparent;color:var(--accent);border:1px solid rgba(233,30,99,0.12)}
     .note{font-size:13px;color:var(--muted)}
 
-    /* Right preview */
     .right{display:flex;flex-direction:column;justify-content:center}
     .preview{height:100%;display:flex;align-items:center;justify-content:center}
     .phone{width:260px;height:520px;border-radius:28px;background:linear-gradient(180deg,#fff,#fbfbff);box-shadow:0 12px 40px rgba(32,40,60,0.12);display:flex;flex-direction:column;overflow:hidden}
@@ -48,7 +45,6 @@ Instructions:
 
     footer{font-size:12px;color:var(--muted);text-align:center;margin-top:18px}
 
-    /* Responsive */
     @media (max-width:880px){.wrap{grid-template-columns:1fr;}.right{order:-1}.phone{margin:0 auto}}
   </style>
 </head>
@@ -56,8 +52,8 @@ Instructions:
   <div class="wrap">
     <div class="card left">
       <div class="brand">
-        <!-- Put your logo file in the repo and name it logo.png OR change the src to your hosted logo URL -->
-        <img src="logo.png" alt="Dvaas Cosmetics Logo" onerror="this.style.opacity=0.6;this.alt='Replace logo.png with your logo'" />
+        <!-- Logo replaced with online placeholder -->
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Official_Logo.png" alt="Dvaas Cosmetics Logo" />
         <div>
           <h1>Dvaas Cosmetics</h1>
           <div class="desc">Welcome back! Log in to manage products, view analytics, and update your store.</div>
@@ -94,7 +90,7 @@ Instructions:
       <div class="preview">
         <div class="phone">
           <div class="top">
-            <img src="logo.png" alt="logo" style="width:48px;height:48px;object-fit:contain;border-radius:8px" onerror="this.style.opacity=0.7" />
+            <img src="https://upload.wikimedia.org/wikipedia/commons/5/5a/Official_Logo.png" alt="logo" style="width:48px;height:48px;object-fit:contain;border-radius:8px" />
           </div>
           <div class="screen">
             <div class="login-box">
@@ -111,7 +107,6 @@ Instructions:
   </div>
 
   <script>
-    // Simple client-side validation demo (no backend)
     document.getElementById('loginForm').addEventListener('submit', function(e){
       e.preventDefault();
       var user = document.getElementById('user').value.trim();
